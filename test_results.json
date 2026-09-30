@@ -1,0 +1,282 @@
+[
+  {
+    "id": "TC01",
+    "desc": "E001 lương cố định 15tr + phụ cấp 2tr + thưởng 1tr",
+    "expected": "18,000,000",
+    "actual": "18,000,000",
+    "pass": true
+  },
+  {
+    "id": "TC02",
+    "desc": "E002 theo giờ, 150 giờ (không vượt ngưỡng) + thưởng 500k",
+    "expected": "15,500,000",
+    "actual": "15,500,000",
+    "pass": true
+  },
+  {
+    "id": "TC03",
+    "desc": "E003 theo giờ, 170 giờ (vượt 10 giờ x 1,5)",
+    "expected": "17,500,000",
+    "actual": "17,500,000",
+    "pass": true
+  },
+  {
+    "id": "TC04",
+    "desc": "E004 kinh doanh: 8tr + 5% x 200tr + thưởng 2% x 50tr",
+    "expected": "19,000,000",
+    "actual": "19,000,000",
+    "pass": true
+  },
+  {
+    "id": "TC05",
+    "desc": "Tổng bảng lương 4 nhân sự",
+    "expected": "70,000,000",
+    "actual": "70,000,000",
+    "pass": true
+  },
+  {
+    "id": "TC06",
+    "desc": "Tổng phòng Hỗ trợ (E002 + E003)",
+    "expected": "33,000,000",
+    "actual": "33,000,000",
+    "pass": true
+  },
+  {
+    "id": "TC07",
+    "desc": "Người thu nhập cao nhất",
+    "expected": "E004",
+    "actual": "E004",
+    "pass": true
+  },
+  {
+    "id": "TC08",
+    "desc": "Biên: đúng 160 giờ (chưa có giờ vượt)",
+    "expected": "16,000,000",
+    "actual": "16,000,000",
+    "pass": true
+  },
+  {
+    "id": "TC09",
+    "desc": "Biên: 161 giờ (vượt 1 giờ)",
+    "expected": "16,150,000",
+    "actual": "16,150,000",
+    "pass": true
+  },
+  {
+    "id": "TC10",
+    "desc": "Biên trên: 250 giờ hợp lệ (160 + 90 x 1,5)",
+    "expected": "29,500,000",
+    "actual": "29,500,000",
+    "pass": true
+  },
+  {
+    "id": "TC11",
+    "desc": "Lỗi: 251 giờ (vượt giới hạn 250)",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC12",
+    "desc": "Lỗi: số giờ âm (-1)",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC13",
+    "desc": "Biên dưới: 0 giờ",
+    "expected": "0",
+    "actual": "0",
+    "pass": true
+  },
+  {
+    "id": "TC14",
+    "desc": "Biên: hoa hồng 0,3 hợp lệ",
+    "expected": "Không lỗi",
+    "actual": "Không lỗi",
+    "pass": true
+  },
+  {
+    "id": "TC15",
+    "desc": "Lỗi: hoa hồng 0,31",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC16",
+    "desc": "Lỗi: hoa hồng âm (-0,01)",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC17",
+    "desc": "Lỗi: mã nhân sự rỗng",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC18",
+    "desc": "Lỗi: họ tên chỉ có khoảng trắng",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC19",
+    "desc": "Lỗi: phòng ban rỗng",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC20",
+    "desc": "Lỗi: lương tháng âm",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC21",
+    "desc": "addBonus(amount) với amount = 0",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC22",
+    "desc": "addBonus(amount, reason) với reason rỗng",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC23",
+    "desc": "addBonus(rate, ref, reason): rate = 0,5 hợp lệ",
+    "expected": "Không lỗi",
+    "actual": "Không lỗi",
+    "pass": true
+  },
+  {
+    "id": "TC24",
+    "desc": "addBonus(rate, ref, reason): rate = 0,51",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC25",
+    "desc": "addBonus(rate, ref, reason): rate = 0",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC26",
+    "desc": "addBonus(rate, ref, reason): referenceAmount = 0",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC27",
+    "desc": "addBonus với 4 đối số (không có phiên bản phù hợp)",
+    "expected": "TypeError",
+    "actual": "TypeError",
+    "pass": true
+  },
+  {
+    "id": "TC28",
+    "desc": "Lịch sử thưởng: 1 thưởng cố định + 1 thưởng theo tỷ lệ",
+    "expected": "2|200,000",
+    "actual": "2|200,000",
+    "pass": true
+  },
+  {
+    "id": "TC29",
+    "desc": "Constructor rút gọn: giá trị mặc định",
+    "expected": "Unassigned|0|0",
+    "actual": "Unassigned|0|0",
+    "pass": true
+  },
+  {
+    "id": "TC30",
+    "desc": "resetBonus() đầu kỳ mới",
+    "expected": "1,000,000",
+    "actual": "1,000,000",
+    "pass": true
+  },
+  {
+    "id": "TC31",
+    "desc": "Không thể khởi tạo lớp trừu tượng Employee",
+    "expected": "TypeError",
+    "actual": "TypeError",
+    "pass": true
+  },
+  {
+    "id": "TC32",
+    "desc": "Payroll: thêm nhân sự trùng mã",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC33",
+    "desc": "Payroll: thêm đối tượng không phải Employee",
+    "expected": "TypeError",
+    "actual": "TypeError",
+    "pass": true
+  },
+  {
+    "id": "TC34",
+    "desc": "Payroll rỗng: tổng, cao nhất, tìm, hiển thị",
+    "expected": "0|None|None|(Bảng lương trống - chưa có nhân sự)",
+    "actual": "0|None|None|(Bảng lương trống - chưa có nhân sự)",
+    "pass": true
+  },
+  {
+    "id": "TC35",
+    "desc": "Kỳ lương sai định dạng (2026-13)",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC36",
+    "desc": "Cập nhật doanh số âm bị từ chối",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "pass": true
+  },
+  {
+    "id": "TC37",
+    "desc": "Ghi nhận thêm đơn hàng recordSale(50) vào doanh số 100",
+    "expected": "150",
+    "actual": "150",
+    "pass": true
+  },
+  {
+    "id": "TC38",
+    "desc": "Thêm ContractEmployee mới: Payroll không cần sửa (tổng, tổng phòng Hỗ trợ)",
+    "expected": "75,000,000|38,000,000",
+    "actual": "75,000,000|38,000,000",
+    "pass": true
+  },
+  {
+    "id": "TC39",
+    "desc": "Giá trị lương là chuỗi ký tự (sai kiểu)",
+    "expected": "TypeError",
+    "actual": "TypeError",
+    "pass": true
+  },
+  {
+    "id": "TC40",
+    "desc": "Giá trị lương là bool (True)",
+    "expected": "TypeError",
+    "actual": "TypeError",
+    "pass": true
+  }
+]
