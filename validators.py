@@ -1,3 +1,7 @@
+# MSSV: 20227207
+# Họ và tên: Phan Anh Tuấn
+
+
 """Các hàm kiểm tra dữ liệu dùng chung (tránh lặp logic validate ở nhiều lớp)."""
 from decimal import Decimal
 

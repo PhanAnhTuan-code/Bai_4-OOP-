@@ -1,3 +1,6 @@
+# MSSV: 20227207
+# Họ và tên: Phan Anh Tuấn
+
 """Bảng tình huống kiểm thử: (id, mô tả, kỳ vọng, hàm trả về chuỗi quan sát).
 Dùng chung cho unittest (test_payroll.py) và bộ tạo báo cáo (run_report.py)."""
 from decimal import Decimal

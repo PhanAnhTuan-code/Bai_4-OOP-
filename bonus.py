@@ -1,3 +1,6 @@
+# MSSV: 20227207
+# Họ và tên: Phan Anh Tuấn
+
 """Bản ghi thưởng bất biến - dùng để lưu lịch sử thưởng (không dùng mảng song song)."""
 from dataclasses import dataclass
 from decimal import Decimal
